@@ -1,0 +1,13 @@
+FROM tci/cli:latest
+
+WORKDIR /tci
+
+COPY ./scripts/stream-tci-log.sh ./
+
+ENV APP_NAME="myAppName"
+ENV HC_MIN=5
+
+RUN cat ./stream-tci-log.sh >> ./tci-script.sh 
+RUN mkdir ./logs
+
+# CMD ["./tci-script.sh"]

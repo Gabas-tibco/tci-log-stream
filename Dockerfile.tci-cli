@@ -1,0 +1,17 @@
+FROM centos:8
+
+WORKDIR /tci
+
+COPY ./tibcli .
+COPY ./scripts/tci-login.sh .
+
+ENV USER=
+ENV PASSWORD=
+ENV ORG=
+ENV REGION=
+
+RUN cat ./tci-login.sh >> ./tci-script.sh
+
+RUN chmod +x ./*
+
+CMD ["./tci-script.sh"]
