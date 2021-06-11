@@ -1,5 +1,6 @@
 ### Download tibcli
-Download tibcli from tibco cloud and add ti to the root.
+Download tibcli from tibco cloud and add it to the root.
+
 Integration apps -> Environment & Tools -> TIBCO® Cloud - Command Line Interface -> Linux version
 
 ### Build the images
